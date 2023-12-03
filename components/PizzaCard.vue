@@ -1,5 +1,5 @@
 <template>
-  <div class="flex w-[250px]">
+  <div class="flex w-[250px] cursor-pointer">
     <div class="flex flex-col p-2 gap-4 bg-gray-0 items-center rounded-xl">
       <div class="flex justify-center w-full bg-gray-5 rounded-lg">
         <img :src="image" :alt="name" width="150" class="object-cover">

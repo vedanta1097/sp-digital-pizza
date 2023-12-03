@@ -1,8 +1,8 @@
 <template>
   <div class="flex min-h-screen">
-    <div class="flex flex-col grow bg-white pt-10 px-12 w-full">
+    <div class="bg-white pt-10 px-12 w-full">
       <h2 class="text-3xl text-gray-10 mb-6">Pizza List</h2>
-      <div class="flex gap-4">
+      <div class="flex flex-wrap gap-4">
         <PizzaCard
           v-for="pizza in PIZZAS"
           :key="pizza.name"
@@ -13,7 +13,7 @@
         />
       </div>
     </div>
-    <div class="flex flex-col w-[550px] bg-gray-0 py-10 px-4">
+    <div class="flex flex-col w-[550px] h-screen bg-gray-0 py-10 px-4">
       <h2 class="text-3xl text-gray-10">Cart</h2>
       <div class="flex grow items-center text-center justify-center">
         <p class="text-gray-10">

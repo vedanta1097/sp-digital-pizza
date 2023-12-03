@@ -1,0 +1,26 @@
+{
+  "$schema": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/eslintrc.json",
+  "root": true,
+  "extends": ["@bukalapak/eslint-config/dist/nuxt3", "@bukalapak/eslint-config/dist/prettier/vue"],
+  "rules": {
+    "import/order": "off",
+    "unicorn/filename-case": [
+      "error",
+      {
+        "cases": {
+          "kebabCase": true,
+          "pascalCase": true,
+          "camelCase": true
+        },
+        "ignore": ["\\.test\\.ts$"]
+      }
+    ],
+    "unicorn/no-abusive-eslint-disable": "off",
+    "unicorn/expiring-todo-comments": "off"
+  },
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "tsconfigRootDir": ".",
+    "sourceType": "module"
+  }
+}

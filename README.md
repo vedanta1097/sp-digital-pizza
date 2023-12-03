@@ -1,3 +1,7 @@
+# DEMO
+
+[testing.webm](https://github.com/vedanta1097/sp-digital-pizza/assets/17045245/9d41e436-aaca-4d44-9108-dd621cce18ac)
+
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.

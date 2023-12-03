@@ -12,6 +12,7 @@
         v-for="(cart, index) in carts"
         :key="index"
         :cart="cart"
+        @remove-cart="emit('removeCart', $event)"
       />
     </div>
     <div class="flex justify-between bg-primary rounded-lg py-4 px-5">
@@ -32,6 +33,10 @@ const props = withDefaults(
     carts: () => []
   }
 )
+
+const emit = defineEmits<{
+  (e: 'removeCart', value: number): void
+}>()
 
 const totalPrice = computed(() => props.carts.reduce((acc, curr) => acc + curr.totalPrice, 0))
 </script>

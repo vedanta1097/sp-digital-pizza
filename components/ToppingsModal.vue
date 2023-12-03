@@ -25,7 +25,7 @@
               </div>
               <div class="flex justify-end">
                 <button
-                  class="bg-primary text-white py-2 px-4 rounded-md font-bold"
+                  class="bg-primary hover:bg-sky-500 text-white py-2 px-4 rounded-md font-bold"
                   @click="addToCart"
                 >
                   Add to Cart

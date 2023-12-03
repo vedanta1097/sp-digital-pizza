@@ -1,7 +1,10 @@
 <template>
   <div class="flex min-h-screen">
     <PizzaList @select-pizza="chooseToppings" />
-    <CartSection :carts="carts" />
+    <CartSection
+      :carts="carts"
+      @remove-cart="removeCart"
+    />
     <ToppingsModal
       :is-active="isActive"
       @add-to-cart="addToCart"
@@ -32,6 +35,7 @@ function addToCart(toppings: ToppingType[]) {
     carts.value = [
       ...carts.value,
       {
+        id: carts.value.length > 0 ? carts.value[carts.value.length - 1].id + 1 : 1,
         item: selectedPizza.value,
         toppings: toppings,
         totalPrice: toppings.reduce((acc, curr) => acc + curr.price, selectedPizza.value?.price || 0)
@@ -39,5 +43,9 @@ function addToCart(toppings: ToppingType[]) {
     ]
     selectedPizza.value = undefined
   }
+}
+
+function removeCart(id: number) {
+  carts.value = carts.value.filter(cart => cart.id !== id)
 }
 </script>

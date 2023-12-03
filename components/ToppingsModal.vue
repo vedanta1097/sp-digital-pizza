@@ -9,7 +9,7 @@
           />
           <div class="w-full max-w-lg p-[24px] relative m-auto bg-white rounded-md z-30">
             <div class="flex flex-col gap-4">
-              <h2 class="text-2xl text-gray-10">Toppings</h2>
+              <h2 class="text-2xl text-primary">Toppings</h2>
               <div class="grid grid-cols-3 gap-2">
                 <div v-for="topping in TOPPINGS">
                   <input
@@ -18,14 +18,14 @@
                     :value="topping"
                     v-model="selectedToppings"
                   >
-                  <label :for="topping.name" class="ml-2 text-gray-80 text-sm">
+                  <label :for="topping.name" class="ml-2 text-gray-80 text-sm cursor-pointer">
                     {{ topping.name }} (${{ topping.price }})
                   </label>
                 </div>
               </div>
               <div class="flex justify-end">
                 <button
-                  class="bg-gray-5 text-gray-10 py-2 px-4 rounded-md font-bold"
+                  class="bg-primary text-white py-2 px-4 rounded-md font-bold"
                   @click="addToCart"
                 >
                   Add to Cart

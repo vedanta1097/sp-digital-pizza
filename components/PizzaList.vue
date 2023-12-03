@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white pt-10 px-12 w-full">
-    <h2 class="text-3xl text-gray-10 mb-6">Pizza List</h2>
+    <h2 class="text-3xl text-primary mb-6">Pizza List</h2>
     <div class="flex flex-wrap gap-4">
       <PizzaCard
         v-for="pizza in PIZZAS"

@@ -1,7 +1,7 @@
 <template>
 <div v-if="cart?.id" class="flex p-2 gap-2 rounded-lg bg-secondary">
   <img :src="cart.item.image" :alt="cart.item.image" width="120">
-  <div class="flex flex-col gap-2">
+  <div class="flex flex-col gap-2 w-full">
     <p class="font-semibold text-gray-80">{{ cart.item.name }}</p>
     <p class="text-gray-80 text-xs flex grow">{{ toppingList }}</p>
     <div class="flex justify-between items-center">

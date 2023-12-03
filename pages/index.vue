@@ -1,7 +1,7 @@
 <template>
   <div class="flex min-h-screen">
     <PizzaList @select-pizza="chooseToppings" />
-    <CartSection />
+    <CartSection :carts="carts" />
     <ToppingsModal
       :is-active="isActive"
       @add-to-cart="addToCart"
@@ -33,7 +33,8 @@ function addToCart(toppings: ToppingType[]) {
       ...carts.value,
       {
         item: selectedPizza.value,
-        toppings: toppings
+        toppings: toppings,
+        totalPrice: toppings.reduce((acc, curr) => acc + curr.price, selectedPizza.value?.price || 0)
       }
     ]
     selectedPizza.value = undefined

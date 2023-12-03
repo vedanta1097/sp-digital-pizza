@@ -2,7 +2,7 @@
   <div class="flex w-[250px] cursor-pointer">
     <div class="flex flex-col p-2 gap-4 bg-gray-0 items-center rounded-xl">
       <div class="flex justify-center w-full bg-gray-5 rounded-lg">
-        <img :src="image" :alt="name" width="150" class="object-cover">
+        <img :src="image" :alt="name" width="150">
       </div>
       <div class="px-6 grow">
         <p class="font-semibold text-gray-10 text-center">{{ name }}</p>
